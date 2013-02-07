@@ -6,14 +6,14 @@ class ControladorPrincipal {
 
         //Refrescar sesi�n
         session_start();
-        if (!isset($_SESSION['registrado'])) {
-            $_SESSION['registrado'] = false;
+        if (!isset($_SESSION['usuario'])) {
+            $_SESSION['usuario'] = '';
         }
-        if (!isset($_SESSION['tipo_usuario'])) {
-            $_SESSION['tipo_usuario'] = 'invitado';
-        }
+        //if (!isset($_SESSION['tipo_usuario'])) {
+        //    $_SESSION['tipo_usuario'] = 'invitado';
+        //}
 
-        if (!isset($_SESSION['idioma']))
+       if (!isset($_SESSION['idioma']))
             $_SESSION['idioma'] = 'es';
 
         //Inclusi�n de ficheros de clases base para el patr�n MVC

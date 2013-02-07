@@ -93,14 +93,24 @@
 
 						<li class="span4">
 						
-								<form class="form-signin">
+								<form class="form-signin" method="post" action="?controlador=index"\>
 									<h2 class="form-signin-heading">Iniciar sesión</h2>
-									<input type="text" class="input-block-level" placeholder="Email address">
-									<input type="password" class="input-block-level" placeholder="Password">
+									<input title="Email" name="email" type="email" required="true" class="input-block-level" placeholder="Email address">
+									<input title="Pass" name="pass" type="password" required="true" class="input-block-level" placeholder="Password">
 									<label class="checkbox">
-										<input type="checkbox" value="remember-me">
+										<input title="Recordar contraseña" type="checkbox" value="remember-me">
 										Recordar contraseña </label>
-									<button class="btn btn-large btn-primary" type="submit">
+									<?php
+									if (!empty($vars['errorlogin'])) {
+            							if ($vars['errorlogin'] == true)
+                							print("<div class=\"alert alert-error\">
+  												<h4>Error</h4>
+  												Contraseña o e-mail incorrectos
+											</div>");
+        								}
+									
+									?>
+									<button class="btn btn-large btn-primary" title="Iniciar sesión" type="submit">
 										Iniciar sesión
 									</button>
 								</form>
