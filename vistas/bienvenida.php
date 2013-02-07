@@ -108,7 +108,6 @@
   												Contraseña o e-mail incorrectos
 											</div>");
         								}
-									
 									?>
 									<button class="btn btn-large btn-primary" title="Iniciar sesión" type="submit">
 										Iniciar sesión
