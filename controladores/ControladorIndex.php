@@ -8,12 +8,17 @@ class ControladorIndex extends Controlador{
 
 	function index(){
         //Formamos el nombre del controlador o tomamos controladorIndex
-            if(!empty($_POST['entrando'])){
+            if(isset($_POST['email'])){
                 require_once 'controladores/ControladorUsuario.php';
                 $this->controladorUsuario=new ControladorUsuario();
-                $exito=$this->controladorUsuario->login($_POST['usuario'], $_POST['password']);
-                $data['errorlogin']=!$exito;
-                $this->vista->mostrar('bienvenida.php',$data);
+                $exito=$this->controladorUsuario->login($_POST['email'], $_POST['pass']);
+				$data['errorlogin']=!$exito;
+                if($exito == true) {
+                	$this->vista->mostrar('formulario.php');
+                } else {
+                	$this->vista->mostrar('bienvenida.php', $data);
+                }
+                
             }else{
            
             $this->vista->mostrar('bienvenida.php');	

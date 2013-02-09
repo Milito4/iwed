@@ -12,7 +12,7 @@ $config->set('DirVistas', 'vistas/');
 //$config->set('bdpassword', 'webaccess');
 //$config->set('path_tomcat', '$CATALINA_HOME/webapps/ROOT/index.html');
 $config->set('bdhost', 'localhost');
-$config->set('bdnombre', 'seg');
-$config->set('bdusuario', 'acceso_web');
-$config->set('bdpassword', 'webaccess');
+$config->set('bdnombre', 'iwed_bd');
+$config->set('bdusuario', 'BD_IWED');
+$config->set('bdpassword', 'BD_IWEDPASS');
 ?>
